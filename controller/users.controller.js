@@ -1,6 +1,47 @@
 let users = require('../person_api/person.json');
+let products = [
+    {id: 1, name: 'Nur1'},
+    {id: 2, name: 'Nur2'},
+    {id: 3, name: 'Nur3'},
+]
 
-module.exports.getAllUsers = ((req, res, next) => {
+// get method
+module.exports.getRandomUser = (req, res, next) => {
+    // console.log(users)
+    // res.send.random(users).slice()
+    next();
+}
+module.exports.getAllUsers = (req, res, next) => {
     // console.log(users)
     res.send(users)
-})
+    next();
+}
+
+// post method
+module.exports.saveUser = (req, res, next) => {
+    users.push(req.body);
+    // console.log(req.body);
+    res.send(users);
+}
+
+// patch
+module.exports.updateUser = (req, res, next) => {
+    const {id, name, gender, contact, address, photoUrl} = req.params;
+    const filter = { _id: id };
+    const newData = users.find(user => user.id === Number(id));
+    newData.id = id;
+    newData.name = req.body.name;
+    newData.gender = req.body.gender;
+    newData.contact = req.body.contact;
+    newData.address = req.body.address;
+    newData.photoUrl = req.body.photoUrl;
+    res.send(newData);
+}
+
+
+// delete 
+module.exports.deleteUser = (req, res, next) => {
+    const { id } = req.params;
+    const newData = users.filter(user => user.id !== Number(id));
+    res.send(newData);
+}

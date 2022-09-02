@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 
 app.all('*', (req, res) => {
     res.send("Router is not found")
