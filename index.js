@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const usersRouter = require('./routes/users.route')
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 5000;
@@ -9,6 +10,11 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.use('/users', usersRouter);
+
+app.all('*', (req, res) => {
+    res.send("Router is not found")
+})
 
 // Initial check
 app.get('/', (req, res) => {
