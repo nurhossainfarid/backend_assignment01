@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "gender": "male",
+        "name": "Farid",
+        "contact": "01841268946",
+        "address": "Noakhali,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    },
+    {
+        "id": 2,
+        "gender": "male",
+        "name": "Salman",
+        "contact": "01841268946",
+        "address": "Ashulia,Bangladesh",
+        "photoUrl": "./images/salman.jpg"
+    },
+    {
+        "id": 3,
+        "gender": "male",
+        "name": "Sabbir",
+        "contact": "01841268946",
+        "address": "Dhaka,Bangladesh",
+        "photoUrl": "./images/sabbir.jpg"
+    },
+    {
+        "id": 4,
+        "gender": "male",
+        "name": "Tareque",
+        "contact": "01841268946",
+        "address": "Rajshahi,Bangladesh",
+        "photoUrl": "./images/traeque.jpg.jpg"
+    },
+    {
+        "id": 5,
+        "gender": "male",
+        "name": "Ferdouse",
+        "contact": "01841268946",
+        "address": "Ashulia,Bangladesh",
+        "photoUrl": "./images/ferdous.jpg"
+    },
+    {
+        "id": 6,
+        "gender": "male",
+        "name": "Rakib",
+        "contact": "01841268946",
+        "address": "Noakhali,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    },
+    {
+        "id": 7,
+        "gender": "male",
+        "name": "Sagor",
+        "contact": "01841268946",
+        "address": "shirajgong,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    },
+    {
+        "id": 8,
+        "gender": "Female",
+        "name": "Saima",
+        "contact": "01841268946",
+        "address": "Khulna,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    },
+    {
+        "id": 9,
+        "gender": "Female",
+        "name": "Ritu",
+        "contact": "01841268946",
+        "address": "Chattrogram,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    },
+    {
+        "id": 10,
+        "gender": "Female",
+        "name": "Sumaia",
+        "contact": "01841268946",
+        "address": "Noakhali,Bangladesh",
+        "photoUrl": "./images/myphoto.jpg"
+    }
+]
