@@ -5,10 +5,21 @@ let products = [
     {id: 3, name: 'Nur3'},
 ]
 
+// let maxUsers = users.length;
+// let minUser = 1;
+// let randomNumber =Math.floor(Math.random() * 10);
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+let maxUsers = users.length;
+
 // get method
 module.exports.getRandomUser = (req, res, next) => {
-    // console.log(users)
-    // res.send.random(users).slice()
+    const randomUserId = getRndInteger(1, maxUsers);
+    const randomUser = users.find(user => user.id === randomUserId);
+    console.log(maxUsers, randomUserId);
+    res.send(randomUser);
     next();
 }
 module.exports.getAllUsers = (req, res, next) => {
