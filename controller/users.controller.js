@@ -23,8 +23,7 @@ module.exports.getRandomUser = (req, res, next) => {
 }
 module.exports.getAllUsers = (req, res, next) => {
     const { limit } = req.query
-    console.log(limit);
-    // console.log(users)
+    // add user limitations
     if ('/all') {
         res.send(users.slice(0, limit));
     }
@@ -43,8 +42,8 @@ module.exports.updateUser = (req, res, next) => {
     const {id, name, gender, contact, address, photoUrl} = req.params;
     const filter = { _id: id };
     const newData = users.find(user => user.id === Number(id));
-    console.log(newData.id);
-    console.log(id);
+
+    // check valid id
     if (Number(id) !== newData.id) {
         console.log("Invalid id");
         res.send('invalid user')
@@ -63,6 +62,12 @@ module.exports.updateUser = (req, res, next) => {
 // delete 
 module.exports.deleteUser = (req, res, next) => {
     const { id } = req.params;
+    const userId = users.find(user => user.id === Number(id));
     const newData = users.filter(user => user.id !== Number(id));
-    res.send(newData);
+    // check valid id
+    if (Number(id) !== userId.id) {
+        res.send("Invalid user or Id")
+    } else {
+        res.send(newData);
+    }
 }
