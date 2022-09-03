@@ -1,10 +1,8 @@
+const fs = require('fs')
 let users = require('../person_api/person.json');
-let products = [
-    {id: 1, name: 'Nur1'},
-    {id: 2, name: 'Nur2'},
-    {id: 3, name: 'Nur3'},
-]
 
+
+// let persons = 
 // let maxUsers = users.length;
 // let minUser = 1;
 // let randomNumber =Math.floor(Math.random() * 10);
@@ -24,7 +22,9 @@ module.exports.getRandomUser = (req, res, next) => {
 }
 module.exports.getAllUsers = (req, res, next) => {
     // console.log(users)
-    res.send(users)
+    if ('/all') {
+        res.send(users)
+    }
     next();
 }
 
