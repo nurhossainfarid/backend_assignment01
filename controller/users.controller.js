@@ -58,6 +58,11 @@ module.exports.updateUser = (req, res, next) => {
     }
 }
 
+// update multiple users 
+module.exports.updateMultipleUsers = (req, res, next) => {
+    res.send('update multiple users')
+}
+
 
 // delete 
 module.exports.deleteUser = (req, res, next) => {
