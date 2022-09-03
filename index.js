@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/user', usersRouter);
 
 // Initial check
-module.exports.userData = app.get('/', (req, res) => {
+module.exports.userData = app.get('/user', (req, res) => {
     // res.send('Welcome to first backend assignment');
     if (req.url = '/') {
         fs.readFile('./person_api/person.json', (err, data) => {

@@ -24,7 +24,7 @@ module.exports.getRandomUser = (req, res, next) => {
 module.exports.getAllUsers = (req, res, next) => {
     // console.log(users)
     if ('/all') {
-        res.send(usersData)
+        res.send(users)
     }
     next();
 }
