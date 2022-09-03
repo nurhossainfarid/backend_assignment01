@@ -14,6 +14,9 @@ app.use(express.json());
 app.use('/user', usersRouter);
 
 // Initial check
+app.get('/', (req, res) => {
+    res.send('Welcome to first assignment');
+})
 module.exports.userData = app.get('/user', (req, res) => {
     // res.send('Welcome to first backend assignment');
     if (req.url = '/') {
