@@ -1,5 +1,6 @@
 const fs = require('fs')
 let users = require('../person_api/person.json');
+let usersData = require('../index');
 
 
 // let persons = 
@@ -23,7 +24,7 @@ module.exports.getRandomUser = (req, res, next) => {
 module.exports.getAllUsers = (req, res, next) => {
     // console.log(users)
     if ('/all') {
-        res.send(users)
+        res.send(usersData)
     }
     next();
 }
